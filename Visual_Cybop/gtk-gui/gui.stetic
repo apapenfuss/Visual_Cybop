@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <widget-library name="../bin/Debug/Visual_Cybop.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="656 517">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.DrawingArea" id="DrawMain">
+            <property name="MemberName" />
+            <property name="WidthRequest">500</property>
+            <property name="HeightRequest">500</property>
+            <property name="Events">ExposureMask, PointerMotionMask, ButtonPressMask, ButtonReleaseMask</property>
+            <signal name="ButtonPressEvent" handler="OnDrawMainButtonPressEvent" />
+            <signal name="MotionNotifyEvent" handler="OnDrawMainMotionNotifyEvent" />
+            <signal name="ButtonReleaseEvent" handler="OnDrawMainButtonReleaseEvent" />
+            <signal name="ExposeEvent" handler="OnDrawMainExposeEvent" />
+          </widget>
+          <packing>
+            <property name="X">17</property>
+            <property name="Y">17</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label2">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">label2</property>
+          </widget>
+          <packing>
+            <property name="X">535</property>
+            <property name="Y">20</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">label1</property>
+          </widget>
+          <packing>
+            <property name="X">534</property>
+            <property name="Y">42</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">label2</property>
+          </widget>
+          <packing>
+            <property name="X">534</property>
+            <property name="Y">64</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btn_AddRect">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Add Rectangle</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnAddRectClicked" />
+          </widget>
+          <packing>
+            <property name="X">522</property>
+            <property name="Y">114</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>
